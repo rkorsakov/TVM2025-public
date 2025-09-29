@@ -11,8 +11,7 @@ export const rpnStackDepth = {
         const right = b.stackDepth;
         const maxDepth = Math.max(
             left.max,
-            left.out + right.max,
-            left.out + right.out
+            left.out + right.max
         );
         const outDepth = left.out + right.out - 1;
         return {max: maxDepth, out: outDepth};
@@ -22,8 +21,7 @@ export const rpnStackDepth = {
         const right = b.stackDepth;
         const maxDepth = Math.max(
             left.max,
-            left.out + right.max,
-            left.out + right.out
+            left.out + right.max
         );
         const outDepth = left.out + right.out - 1;
         return {max: maxDepth, out: outDepth};
