@@ -1,7 +1,7 @@
 import { test } from "../../mark";
 
-import { Expr, parseExpr, printExpr } from "../../lab04";
-import { compileAndExecute, getVariables } from "../../lab05";
+import { Expr, parseExpr, printExpr } from "../../lab04/src";
+import { compileAndExecute, getVariables } from "../../lab05/src";
 
 import { derive } from "../src";
 
