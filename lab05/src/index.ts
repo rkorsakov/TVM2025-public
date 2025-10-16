@@ -1,4 +1,4 @@
-import { Expr, parseExpr } from "../../lab04";
+import { Expr, parseExpr } from "../../lab04/src";
 import { buildFunction, getVariables } from "./compiler";
 import { Fn } from "./emitHelper";
 
