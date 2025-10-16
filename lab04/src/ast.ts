@@ -19,7 +19,6 @@ export interface BinaryOperation {
     operator: '+' | '-' | '*' | '/'
     left: Expr
     right: Expr
-    haveParens: boolean
 }
 
 export interface UnaryMinus {
