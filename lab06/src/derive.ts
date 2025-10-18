@@ -109,7 +109,8 @@ function simplify(e: Expr): Expr {
                 case "-":
                     if (isZero(right)) return left;
                     if (isZero(left)) {
-                        return simplify({type: "unaryMinus", operand: right});                    }
+                        return simplify({type: "unaryMinus", operand: right});
+                    }
                     if (deepEquals(left, right)) {
                         return {type: "number", value: 0};
                     }
@@ -133,14 +134,18 @@ function simplify(e: Expr): Expr {
                         return simplify({type: "binary", operator: "/", left: left.operand, right: right.operand});
                     }
                     if (left.type === "unaryMinus") {
-                        return simplify({type: "unaryMinus", operand: {
+                        return simplify({
+                            type: "unaryMinus", operand: {
                                 type: "binary", operator: "/", left: left.operand, right: right
-                            }});
+                            }
+                        });
                     }
                     if (right.type === "unaryMinus") {
-                        return simplify({type: "unaryMinus", operand: {
+                        return simplify({
+                            type: "unaryMinus", operand: {
                                 type: "binary", operator: "/", left: left, right: right.operand
-                            }});
+                            }
+                        });
                     }
                     return {type: "binary", operator: "/", left, right};
             }
