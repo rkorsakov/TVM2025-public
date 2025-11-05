@@ -1,4 +1,4 @@
-import { Expr, parseExpr } from "../../lab04/out";
+import { Expr, parseExpr } from "../../lab04/src";
 
 const parseIdentities = (identities: [string, string][]): [Expr, Expr][] => identities.map(([l, r]) => [parseExpr(l), parseExpr(r)]);
 export const basicIdentities = () => parseIdentities([

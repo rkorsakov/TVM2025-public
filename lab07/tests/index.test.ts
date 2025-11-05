@@ -1,8 +1,7 @@
 import { test } from "../../mark";
-import { Expr, parseExpr } from "../../lab04";
+import { Expr, parseExpr } from "../../lab04/src";
 
 import { simplify, cost } from "../src";
-import { basicIdentities, commutativeIdentities, toughIdentities } from './identities';
 import { basicIdentities, commutativeIdentities, toughIdentities } from './identities';
 
 const estimate = (source: string) => cost(parseExpr(source));
